@@ -53,3 +53,35 @@
 //         return ans;
 //     }
 // };
+
+
+
+//  Flattening a Linked List  ==============>>>
+
+// Node *merge(Node* list1, Node*list2){
+//     if(!list1) return list2;
+//     else if(!list2) return list1;
+//     Node *ans;
+//     if(list1->data < list2->data){
+//         ans = list1;
+//         ans->bottom = merge(list1->bottom, list2);
+//     } else {
+//         ans = list2;
+//         ans->bottom = merge(list1, list2->bottom);
+//     }
+//     return ans;
+// }
+
+// Node *flatten(Node *root)
+// {
+//    // Your code here
+//    Node *ans = root, *ptr = root->next;
+//    ans->next = NULL;
+//    while(ptr){
+//        Node *temp = ptr;
+//        ptr = ptr->next;
+//        temp->next = NULL;
+//        ans = merge(ans, temp);
+//    }
+//    return ans;
+// }
